@@ -58,15 +58,17 @@ public class Movement : MonoBehaviour
     }
 
 	void rotatePlayer(string direction) {
-		// GetComponent<Rigidbody2D>().angularVelocity = 0;
-		int rotationRate = 1;
-		// int cap = 200;
-		if(direction.ToLower().Equals("left")) {
-			transform.Rotate(Vector3.forward*rotationRate);
-			// GetComponent<Rigidbody2D>().angularVelocity += rotationRate;
-		} else {
-			transform.Rotate(Vector3.forward*-rotationRate);
-			// GetComponent<Rigidbody2D>().angularVelocity -= rotationRate;
+		if(Time.timeScale != 0) {
+			// GetComponent<Rigidbody2D>().angularVelocity = 0;
+			int rotationRate = 1;
+			// int cap = 200;
+			if(direction.ToLower().Equals("left")) {
+				transform.Rotate(Vector3.forward*rotationRate);
+				// GetComponent<Rigidbody2D>().angularVelocity += rotationRate;
+			} else {
+				transform.Rotate(Vector3.forward*-rotationRate);
+				// GetComponent<Rigidbody2D>().angularVelocity -= rotationRate;
+			}
 		}
 	}
 
