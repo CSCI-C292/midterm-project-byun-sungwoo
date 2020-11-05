@@ -19,8 +19,8 @@ public class Hitbox : MonoBehaviour
 	void OnCollisionEnter2D(Collision2D collision) {
 		Debug.Log(gameObject.name);
 		if(gameObject.name.Equals("Hitbox1"))
-			Movement.hitBoxFlag1 = true;
+			PlayerController.hitBoxFlag1 = true;
 		else
-			Movement.hitBoxFlag2 = true;
+			PlayerController.hitBoxFlag2 = true;
 	}
 }
